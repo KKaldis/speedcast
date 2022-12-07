@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+	--primary: hsl(180, 62%, 55%);
+	--very-dark-blue: hsl(234, 12%, 34%);
+	--greyish-blue: hsl(229, 6%, 66%);
+	--very-light-gray: hsl(0, 0%, 98%);
+}
+
+body {
+	font-size: 15px;
+	font-family: "Poppins", sans-serif;
+	text-align: center;
+	color: var(--very-dark-blue);
+	flex-direction: column;
+	align-items: center;
+}
+
+p {
+	margin: 0;
+}
+
+h2 {
+	margin: 0;
+}
+
+h1 {
+	font-weight: 200;
+}
+
+a {
+	color: var(--very-dark-blue);
+}
+
+h1 > span {
+	font-weight: 600;
+}
+
+#grid {
+	display: inline-grid;
+	gap: 2rem;
+	grid-template-columns: 360px 360px 360px;
+	grid-auto-rows: 200px;
+	padding: 3rem;
+}
+
+/**********************/
+/* CARDS              */
+/**********************/
+
+.card > h4 {
+	margin-top: 0;
+	margin-bottom: 0.75rem;
+	align-self: flex-start;
+}
+.card > p {
+	font-size: 0.75rem;
+	margin: 0;
+	align-self: flex-start;
+}
+
+.card {
+	box-shadow: -0.25rem 0.25rem 1rem #00000040;
+	border-radius: 0.25rem;
+	border-top: solid 2px var(--primary);
+	text-align: start;
+	padding: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.card-lens {
+	display: flex;
+	align-items: flex-end;
+	height: 100%;
+}
+
+.card-lens img {
+	cursor: pointer;
+	padding-top: 1rem;
+	width: 48px;
+	height: auto;
+	transition: all 0.25s ease-out;
+}
+.card-lens img:hover {
+	transform: scale(1.1);
+}
+
+/**********************/
+/* MODAL              */
+/**********************/
+
+#modal {
+	border-bottom: 4px solid var(--primary);
+	background-color: white;
+	max-width: 720px;
+	text-align: start !important;
+	top: 25%;
+	position: absolute;
+	display: flex;
+	flex-direction: column !important;
+}
+
+#modal-backdrop {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background-color: #00000080;
+	opacity: 0;
+	justify-content: center;
+	display: none;
+	z-index: -1;
+	/* transition: all 0.5s ease-out 0.5s; */
+}
+
+#close {
+	background-image: url("/images/close-sharp.svg");
+	height: 1rem;
+	width: 1rem;
+	cursor: pointer;
+}
+
+.show {
+	display: flex !important;
+	opacity: 1 !important;
+	z-index: 1 !important;
+}
+
+.modal-header {
+	padding: 1.5rem;
+	display: flex;
+	color: var(--very-dark-blue);
+	background-color: var(--very-light-gray);
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	gap: 3rem;
+}
+
+.modal-body {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	gap: 2rem;
+	padding: 1.5rem;
+}
+
+/**********************/
+/* RESPONSIVE 		  */
+/**********************/
+
+@media only screen and (max-width: 1280px) {
+	#grid {
+		grid-template-columns: 360px 360px !important;
+	}
+}
+
+@media only screen and (max-width: 880px) {
+	#grid {
+		grid-template-columns: 360px !important;
+		padding: 3rem 0rem !important;
+	}
+	.modal-body {
+		flex-direction: column !important;
+	}
+}
+
+@media only screen and (max-width: 375px) {
+	#grid {
+		grid-template-columns: 1fr !important;
+		padding: 3rem 0rem !important;
+	}
+	.modal-body {
+		flex-direction: column !important;
+	}
+}

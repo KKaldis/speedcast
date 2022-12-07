@@ -4,18 +4,45 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
-		
+		<link rel="stylesheet" href="styles.css" />
+		<script defer rel="stylesheet" src="scripts.js"></script>
 		<title>Front End Exercise</title>
 	</head>
 	<body>
-		
-			<p>CSS, Javascript, API<span>Contacts Appication</span></p>
-			<p>
-				View basic info of contacts in a 3x2 layout. Click on the magnifier icon to open a modal and view detailed contact info contact
-			</p>
-		<p>Challenge by Speedcast</p>
+		<h1>
+			CSS, Javascript, API <br />
+			<span>Contacts Appication</span>
+		</h1>
+		<p>
+			View basic info of contacts in a 3x2 layout. Click on the magnifier <br />
+			icon to open a modal and view detailed contact info contact
+		</p>
+		<!-- Cards -->
+		<div id="grid"></div>
+		<!-- Modal -->
+		<div id="modal-backdrop">
+			<div id="modal">
+				<div class="modal-header">
+					<div class="head-group">
+						<h2 id="modal-name"></h2>
+						<p id="modal-company"></p>
+					</div>
+					<div id="close"></div>
+				</div>
+				<div class="modal-body">
+					<div id="username"></div>
+					<div id="address"></div>
+					<div id="phone"></div>
+					<div class="web-info">
+						<div id="email"></div>
+						<div id="website"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Footer -->
+		<footer>
+			<small>Challenge by <a href="https://www.speedcast.com/">Speedcast</a></small>
 		</footer>
-
-		
 	</body>
 </html>
