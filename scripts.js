@@ -72,7 +72,7 @@ const renderCards = (data) => {
         let lensDiv = document.createElement('div')
         lensDiv.classList.add("card-lens");
         let optic = document.createElement('img')
-        optic.src = "/images/icon-supervisor.svg"
+        optic.src = "images/icon-supervisor.svg"
         lensDiv.addEventListener('click', (event) => toggleModal(event, element))
         lensDiv.append(optic)
         card.append(lensDiv)
